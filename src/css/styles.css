@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 25px;
+  text-align: center;
+  color: #2a2a2a;
+  background-color: #f2f8fd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-card img {
+  margin-bottom: 15px;
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery {
+  margin: 10px 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo-card {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  width: calc((100% - 80px) / 4);
+  margin: 10px;
+
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+
+  transition: transform 250ms linear;
+}
+
+.photo-card:hover,
+.photo-card:focus {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-icons {
+  color: #4a69ff;
+}
+
+/* Load-more-btn */
+
+.load-more-btn.is-hidden {
+  display: none;
+}
+
+.spinner.is-hidden {
+  display: none;
+}
+
+.load-more-btn,
+input[name='query'] {
+  padding: 5px 15px;
+
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: 500;
+}
+
+.spinner {
+  margin-bottom: 8px;
+}
